@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap');
+.container__respuesta__concep{
+    max-width: 50%;
+    width: fit-content;
+    margin-top: 1vh;
+    background: #202c33;
+    padding: 5px;
+    border-radius: 2px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    color: white;
+}
+.container__rc{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.container__pregunta__concep{
+    max-width: 50%;
+    width: fit-content;
+    margin-left: calc(30% - 10px);
+    margin-top: 1vh;
+    padding: 5px;
+    border-radius: 2px;
+    background-color:  #005c4b;/* #00a884*/;
+    display: flex;
+    justify-content: flex-end;
+    font-family: 'IBM Plex Sans', sans-serif;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    color: white;
+}

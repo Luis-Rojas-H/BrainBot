@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+.container__selects{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+}
+.container__titulo__reto{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: 'Merriweather', serif;
+    margin-bottom: 5vh;
+}
+.container__select{
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.container__pnc{
+    width: 25%;
+    margin-left: 15%;
+}
+.container__select select{
+    height: 3.5vh;
+    width: 45%;
+    font-size: 1rem;
+}
+.container__select input{
+    height: 3.2vh;
+    width: 44%;
+    font-size: 1rem;
+}
+.container__boton_generar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
+}
+.boton__generar{
+    background-color: #ffffff;
+    color: #000000;
+    margin-top: 5vh;
+    border-radius: 10%;
+}
+.boton__generar a{
+    text-decoration: none;
+    color: #000000;
+    display: block;
+    padding: 15px 30px;
+    border-radius: 10%;
+}
+.boton__generar:hover{
+    cursor: pointer;
+    background-color: #4d4d59;
+    color: white;
+    border-radius: 10%;
+}
+
+.boton__generar .container__noselec{
+    text-decoration: none;
+    color: #000000;
+    display: block;
+    padding: 15px 30px;
+    border-radius: 10%;
+}
+.boton__generar .container__noselec:hover{
+    cursor: pointer;
+    background-color: #4d4d59;
+    color: white;
+    border-radius: 10%;
+}
+
+.container__completar{
+    height: 5vh;
+    margin-top: 1vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+}
+
+/*--------------------*/
+.container__aviso{
+    background-color: white;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4vh;
+}
+.container__aviso .icono{
+    text-align: center;
+    font-size: 5rem;
+    color: #0ae98a;
+}
+.container__aviso .container__texto{
+    text-align: center;
+    font-size: 1.0625rem;
+    width: calc(100% - 30px);
+    padding: 0 15px 0 15px;
+}
+.container__importante{
+    width: calc(100% - 30px);
+    padding: 0 15px 0 15px;
+    font-weight: 600;
+    text-align: center;
+}

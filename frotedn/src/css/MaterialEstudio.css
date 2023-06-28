@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap');
+.container__material__estudio{
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.container__chat{
+    width: 80%;
+    margin-left: 10%;
+    height: 55vh;/* 
+    background-color: rgba(0, 0, 0, 0.8); */
+    overflow: auto;
+}
+.container__chat::-webkit-scrollbar{
+    width: 5px;
+}
+
+.container__chat::-webkit-scrollbar-track{
+    background-color: #121629;
+}
+.container__chat::-webkit-scrollbar-thumb{
+    background: #FB7638;
+    border-radius: 10px;
+}
+
+/*---------------------------------------------*/
+.container__escribir{
+    width: 80%;
+    margin-left: 10%;
+    height: 6vh;
+    background-color: #c7e3f3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 2.5rem;
+}
+.container__micro__rc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container__micro__rc:hover{
+    cursor: pointer;
+}
+.container__escribir input{
+    height: 85%;
+    width: 100%;
+    font-size: 1.1rem;
+    border: solid 1px #919499;
+    background-color: #1c2028;
+    color: white;
+}
+.container__enviar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+}
+.container__enviar:hover{
+    cursor: pointer;
+}
+/*------------------*/
+.container__materiales{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 1vh;
+    color: #000000;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: #CEE5CD;
+    overflow: auto;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.container__materiales span{
+    font-weight: bold;
+}

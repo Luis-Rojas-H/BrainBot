@@ -83,12 +83,10 @@ router.post("/explicarConcepto", async (req, res) => {
     let startIndex;
     let endIndex;
     let jsonString;
-
     // let nropreguntas = 5;
     // let nivel = "básico";
     // let curso = "Física";
     let peticion = req.body;
-    
     
     console.log(peticion);
     
@@ -96,15 +94,12 @@ router.post("/explicarConcepto", async (req, res) => {
     
     console.log(text);
     
-    
-
     startChar = "[";
     endChar = "]";
 
     startIndex = text.indexOf(startChar);
     endIndex = text.lastIndexOf(endChar);
     
-
     jsonString = text.substring(startIndex, endIndex + 1);
 
     json = JSON.parse(jsonString);

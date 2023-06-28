@@ -78,8 +78,8 @@ router.post("/recomendarMaterial", async (req, res) => {
 
 router.post("/explicarConcepto", async (req, res) => {
     let text;
-    let startChar;
-    let endChar;
+    let startChar=0;
+    let endChar=0;
     let startIndex;
     let endIndex;
     let jsonString;
@@ -87,20 +87,23 @@ router.post("/explicarConcepto", async (req, res) => {
     // let nropreguntas = 5;
     // let nivel = "básico";
     // let curso = "Física";
-
     let peticion = req.body;
-
+    
+    
     console.log(peticion);
-
+    
     text = await Chatgpt.explicarConcepto(peticion.concepto);
-
+    
     console.log(text);
+    
+    
 
     startChar = "[";
     endChar = "]";
 
     startIndex = text.indexOf(startChar);
     endIndex = text.lastIndexOf(endChar);
+    
 
     jsonString = text.substring(startIndex, endIndex + 1);
 

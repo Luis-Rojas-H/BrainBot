@@ -1,7 +1,5 @@
 import { useRef, useState } from "react";
-import SpeechRecognition, {
-    useSpeechRecognition,
-} from "react-speech-recognition";
+import SpeechRecognition, { useSpeechRecognition } from "react-speech-recognition";
 import { HiMicrophone } from "react-icons/hi";
 
 function Microfono() {
@@ -39,6 +37,7 @@ function Microfono() {
     const { transcript, resetTranscript } = useSpeechRecognition({ commands });
     const [isListening, setIsListening] = useState(false);
     const microphoneRef = useRef(null);
+
     if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
         return (
             <div className="mircophone-container">
@@ -46,7 +45,9 @@ function Microfono() {
             </div>
         );
     }
+
     const handleListing = () => {
+        resetTranscript();
         setIsListening(true);
         microphoneRef.current.classList.add("listening");
         SpeechRecognition.startListening({
@@ -59,10 +60,14 @@ function Microfono() {
         microphoneRef.current.classList.remove("listening");
         SpeechRecognition.stopListening();
     };
+
+    /*
     const handleReset = () => {
         stopHandle();
         resetTranscript();
     };
+    */
+
     return (
         <div className="container__microfono__new">
             {console.log(transcript)}
@@ -73,34 +78,9 @@ function Microfono() {
                     onPointerDown={handleListing}
                     onPointerUp={stopHandle}
                 >
-                    {/*<img src={microPhoneIcon} className="microphone-icon" />*/}
                     <HiMicrophone/>
                 </div>
-                {/*<div className="microphone-status">
-                    {isListening
-                        ? "Escuchando........."
-                        : "Click to start Listening"}
-                </div>
-                {isListening && (
-                    <button
-                        className="microphone-stop btn"
-                        onClick={stopHandle}
-                    >
-                        Stop
-                    </button>
-                )}*/}
             </div>
-            {/*transcript && (
-                <div className="microphone-result-container">
-                    <div className="microphone-result-text">{transcript}</div>
-                    <button
-                        className="microphone-reset btn"
-                        onClick={handleReset}
-                    >
-                        Reset
-                    </button>
-                </div>
-            )}*/}
         </div>
     );
 }

@@ -49,7 +49,7 @@ export default function Preguntas() {
 
     useEffect(() => {
         const fetchData = async () => {
-            const url = "http://localhost:8000/api/examen/generarExamenTest";
+            const url = "http://localhost:8000/api/examen/generarExamen";
             const requestData = {
                 nropreguntas: state.preguntas,
                 nivel: state.nivel,
@@ -86,7 +86,7 @@ export default function Preguntas() {
             <div className="container__microfono">
                 {iterador < data.length ? 
                     ""
-                 : <>
+                : <>
                     <div className="container__icono">
                         <Microfono/>
                     </div>

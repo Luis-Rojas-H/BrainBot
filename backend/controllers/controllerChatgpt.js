@@ -26,12 +26,16 @@ const Chatgpt = {
     },
 
     recomendarMaterial: async function (tema) {
-        let consulta = `Recomiendame los mejores sobre ${tema}, maximo 3, desde el año 1950 en adelante, esos libros son objetos en este formato {
+        let consulta = '';
+        if (tema === 'vacio') {
+            consulta = `vuelveme a enviar lo mismo que me enviaste ahora ultimo en el mismo formato`;
+        }
+        consulta = `Recomiendame los mejores sobre ${tema}, maximo 3, desde el año 1950 en adelante, esos libros son objetos en este formato [{
             "titulo": "",
             "autor": "",
             "editorial": "",
             "anio"
-        } los cuales estan guardados en un array generando un array de objetos`;
+        } los cuales estan guardados en un array`;
 
         const completion = await openai.createCompletion({
             model: "text-davinci-003",
@@ -43,9 +47,7 @@ const Chatgpt = {
     },
 
     explicarConcepto: async function (concepto) {
-        let consulta = `${concepto}.  Explicame en maximo 20 palabras, esa respuesta es un objeto en este formato {
-            "respuesta": ""
-        } el cual esta guardado en un array generando un array de objetos`;
+        let consulta = `Explicame esto '${concepto}' en maximo 20 palabras, esa respuesta es un objeto en este formato tal cual entre corchetes [{"respuesta": ""}] los cuales estan guardados en un array generando un array de objetos. ejemplo [{"respuesta":""}]`;
 
         const completion = await openai.createCompletion({
             model: "text-davinci-003",
